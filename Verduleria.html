@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verdulería</title>
+    <link rel="stylesheet" href="verduleria.css">
+</head>
+<body>
+
+<div class="card">
+    <h1>Verdulería</h1>
+    <p>👋 ¡Hola! Seleccioná la fruta que desees.</p>
+    <div class="productos">
+        <div class="producto" onclick="seleccionar(this)">🍎 Manzana</div>
+        <div class="producto" onclick="seleccionar(this)">🍌 Banana</div>
+        <div class="producto" onclick="seleccionar(this)">🍇 Uva</div>
+        <div class="producto" onclick="seleccionar(this)">🍓 Frutilla</div>
+        <div class="producto" onclick="seleccionar(this)">🍉 Sandía</div>
+    </div>
+</div>
+
+<script>
+    function seleccionar(elemento) {
+        document.querySelectorAll('.producto').forEach(el => el.classList.remove('seleccionado'));
+        elemento.classList.add('seleccionado');
+    }
+</script>
+
+</body>
+</html>
